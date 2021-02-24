@@ -1,19 +1,13 @@
 *** Settings ***
-Library     selenium2library
+Library  Selenium2Library
 
 *** Variables ***
-${browser}      Chrome
-${url}          https://www.google.com
-${text}         Gundam
-
+${Search}       Robot Framework
+${URL}          https://google.co.th
+${Browser}      chrome
 
 *** Test Cases ***
-search gundam
-    Search Gundam
-
-
-*** Keywords ***
-Search Gundam via Google
-
-    Open Browser   ${url}   ${browser}
-    Input text   id=lst-ib   ${text}
+Open Website google.com
+    Open Browser  ${URL}    ${Browser}
+Search robotframework at google chrome
+    Input Text      name=q      ${Search}
