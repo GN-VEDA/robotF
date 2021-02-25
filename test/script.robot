@@ -9,7 +9,7 @@ ${Find}         name=btnK
 ${Searchbox}    name=q
 ${DELAY}        1
 
-*** Test Cases ***
+*** Keywords ***
 Open Website google.com.
     Open Browser  ${URL}    ${Browser}
 Search robotframework at google chrome.
