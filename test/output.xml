@@ -1,41 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.1 on darwin)" generated="20210224 22:29:08.621" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.1 on darwin)" generated="20210225 10:48:03.524" rpa="false">
 <suite id="s1" name="Test" source="/Users/cecillian/Documents/robotF/test/test.robot">
-<test id="s1-t1" name="Open Website google.com">
+<test id="s1-t1" name="Open Website google.com.">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20210224 22:29:08.810" level="INFO">Opening browser 'chrome' to base url 'https://google.co.th'.</msg>
-<status status="PASS" starttime="20210224 22:29:08.809" endtime="20210224 22:29:14.148"></status>
+<msg timestamp="20210225 10:48:04.027" level="INFO">Opening browser 'chrome' to base url 'https://google.co.th'.</msg>
+<status status="PASS" starttime="20210225 10:48:04.027" endtime="20210225 10:48:08.940"></status>
 </kw>
-<status status="PASS" starttime="20210224 22:29:08.809" endtime="20210224 22:29:14.149" critical="yes"></status>
+<status status="PASS" starttime="20210225 10:48:04.025" endtime="20210225 10:48:08.940" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Search robotframework at google chrome">
+<test id="s1-t2" name="Search robotframework at google chrome.">
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>name=q</arg>
+<arg>${Searchbox}</arg>
 <arg>${Search}</arg>
 </arguments>
-<msg timestamp="20210224 22:29:14.151" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
-<status status="PASS" starttime="20210224 22:29:14.151" endtime="20210224 22:29:14.391"></status>
+<msg timestamp="20210225 10:48:08.945" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20210225 10:48:08.944" endtime="20210225 10:48:09.246"></status>
 </kw>
-<status status="PASS" starttime="20210224 22:29:14.150" endtime="20210224 22:29:14.391" critical="yes"></status>
+<kw name="Set Selenium Speed ${DELAY}">
+<msg timestamp="20210225 10:48:09.257" level="FAIL">No keyword with name 'Set Selenium Speed ${DELAY}' found.</msg>
+<status status="FAIL" starttime="20210225 10:48:09.256" endtime="20210225 10:48:09.257"></status>
+</kw>
+<status status="FAIL" starttime="20210225 10:48:08.942" endtime="20210225 10:48:09.257" critical="yes">No keyword with name 'Set Selenium Speed ${DELAY}' found.</status>
 </test>
-<status status="PASS" starttime="20210224 22:29:08.624" endtime="20210224 22:29:14.393"></status>
+<test id="s1-t3" name="Click Search by Google">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Find}</arg>
+</arguments>
+<msg timestamp="20210225 10:48:09.259" level="INFO">Clicking button 'name=btnK'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210225 10:48:09.740" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210225 10:48:09.317" endtime="20210225 10:48:09.740"></status>
+</kw>
+<msg timestamp="20210225 10:48:09.746" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=88.0.4324.192)
+</msg>
+<status status="FAIL" starttime="20210225 10:48:09.259" endtime="20210225 10:48:09.746"></status>
+</kw>
+<status status="FAIL" starttime="20210225 10:48:09.258" endtime="20210225 10:48:09.747" critical="yes">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=88.0.4324.192)
+</status>
+</test>
+<status status="FAIL" starttime="20210225 10:48:03.527" endtime="20210225 10:48:09.748"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0">Critical Tests</stat>
-<stat pass="2" fail="0">All Tests</stat>
+<stat pass="1" fail="2">Critical Tests</stat>
+<stat pass="1" fail="2">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="2" id="s1" name="Test">Test</stat>
 </suite>
 </statistics>
 <errors>
