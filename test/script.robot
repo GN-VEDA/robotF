@@ -7,9 +7,9 @@ ${URL}          https://google.co.th
 ${Browser}      chrome
 ${Find}         name=btnK
 ${Searchbox}    name=q
-${DELAY}        1
+${DELAY}        0.5
 
-*** Keywords ***
+*** Test Cases ***
 Open Website google.com.
     Open Browser  ${URL}    ${Browser}
 Search robotframework at google chrome.
@@ -18,3 +18,5 @@ Search robotframework at google chrome.
 
 Click Search by Google
     Click Button   ${Find}
+
+    [Teardown]  Close Browser
